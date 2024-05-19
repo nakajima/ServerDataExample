@@ -53,10 +53,18 @@ struct Server {
 		// Give basic usage
 		router.get("") { _, _ -> String in
 			"""
-			curl localhost:8080/people 													# List people
-			curl -XPOST 'localhost:8080/people?name=Pat&age=40' # Create a person named Pat who is 40
-			curl localhost:8080/people?age=40 									# List people who are 40
-			curl localhost:8080/people/1												# Get the person with id: 1
+			# List people
+			curl localhost:8080/people
+
+			# Create a person named Pat who is 40
+			curl -XPOST 'localhost:8080/people?name=Pat&age=40'
+
+			# List people who are 40
+			curl localhost:8080/people?age=40
+
+			# Get the person with id: 1
+			curl localhost:8080/people/1
+
 			"""
 		}
 
